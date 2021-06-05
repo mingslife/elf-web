@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+  elf-web:
+    image: elf-web:latest
+    restart: always
+    ports:
+      - 80:80
