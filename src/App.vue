@@ -54,8 +54,10 @@ export default {
     applySettings () {
       let settings = store.get('elf:settings')
       this.$settings = settings
-      if (settings && settings['app.language']) {
-        this.$i18n.locale = settings['app.language']
+      if (settings) {
+        if ('app.language' in settings) {
+          this.$i18n.locale = settings['app.language']
+        }
       } else {
         this.refreshSettings()
       }
