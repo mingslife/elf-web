@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 import ElfMarkdown from '@/components/ElfMarkdown'
 
 export default {
@@ -18,7 +20,10 @@ export default {
     return {
       postId: null,
       sourceType: 'markdown',
-      source: ''
+      source: '',
+      contentReady: false,
+      autoSaveDuration: 0,
+      autoSaveTimer: null
     }
   },
   methods: {
@@ -35,6 +40,9 @@ export default {
       this.getContent(this.postId).then(res => {
         this.sourceType = res.data.sourceType
         this.source = res.data.source
+        this.$nextTick(() => {
+          this.contentReady = true
+        })
       })
     },
     imgAdd (filename, file) {
@@ -68,11 +76,9 @@ export default {
       this.refreshData()
 
       // 加载其他数据
-      // this.getAllCategories().then(res => {
-      //   this.extra.categories = res.data.map(row => {
-      //     return { value: row.id, text: row.categoryName }
-      //   })
-      // })
+      if ('app.autoSave' in this.$parent.$settings) {
+        this.autoSaveDuration = parseInt(this.$parent.$settings['app.autoSave'])
+      }
     }
   },
   mounted () {
@@ -87,6 +93,31 @@ export default {
     }])
 
     this.initData()
+  },
+  watch: {
+    // 触发自动保存
+    source () {
+      if (!this.contentReady) {
+        return
+      }
+
+      if (this.autoSaveDuration > 0) {
+        if (this.autoSaveTimer) {
+          this.autoSaveTimer()
+          return
+        }
+        // 防抖
+        this.autoSaveTimer = _.debounce(() => {
+          this.save()
+        }, this.autoSaveDuration)
+      }
+    }
+  },
+  beforeRouteLeave (to, from, next) {
+    if (this.autoSaveTimer) {
+      this.autoSaveTimer.cancel()
+    }
+    next()
   }
 }
 </script>
