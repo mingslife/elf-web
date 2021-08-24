@@ -1,0 +1,9 @@
+{
+  "name": "ELF",
+  "short_name": "ELF",
+  "start_url": "/elf",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "ELF Blogging System",
+  "icons": []
+}
