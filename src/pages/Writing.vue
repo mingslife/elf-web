@@ -110,6 +110,7 @@ export default {
         this.autoSaveTimer = _.debounce(() => {
           this.save()
         }, this.autoSaveDuration)
+        this.autoSaveTimer()
       }
     }
   },
