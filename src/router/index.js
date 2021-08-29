@@ -11,6 +11,7 @@ import Category from '@/pages/Category'
 import Post from '@/pages/Post'
 import Writing from '@/pages/Writing'
 import Comment from '@/pages/Comment'
+import Log from '@/pages/Log'
 
 Vue.use(Router)
 
@@ -26,6 +27,7 @@ export default new Router({
     { path: '/category', name: 'Category', component: Category },
     { path: '/post', name: 'Post', component: Post },
     { path: '/post/:id', name: 'Writing', component: Writing },
-    { path: '/post/:id/comment', name: 'Comment', component: Comment }
+    { path: '/post/:id/comment', name: 'Comment', component: Comment },
+    { path: '/log', name: 'Log', component: Log }
   ]
 })

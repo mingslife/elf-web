@@ -10,7 +10,8 @@ export default {
     category: '分类',
     post: '文章',
     navigation: '导航',
-    setting: '设置'
+    setting: '设置',
+    log: '日志'
   },
   menu: {
     profile: '个人设置',

@@ -10,7 +10,8 @@ export default {
     category: 'Categories',
     post: 'Posts',
     navigation: 'Navigations',
-    setting: 'Settings'
+    setting: 'Settings',
+    log: 'Log'
   },
   menu: {
     profile: 'Profile',

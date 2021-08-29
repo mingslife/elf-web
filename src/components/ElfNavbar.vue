@@ -34,6 +34,10 @@
           <font-awesome-icon icon="cog" />
           <span v-text="$t('nav.setting')"></span>
         </b-nav-item>
+        <b-nav-item to="/log" :active="$route.path === '/log'" v-if="admin">
+          <font-awesome-icon icon="file-alt" />
+          <span v-text="$t('nav.log')"></span>
+        </b-nav-item>
       </b-navbar-nav>
 
       <b-navbar-nav class="ml-auto">
