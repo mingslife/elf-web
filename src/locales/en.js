@@ -111,6 +111,7 @@ export default {
   },
   post: {
     id: 'ID',
+    uniqueId: 'Unique ID',
     title: 'Title',
     keywords: 'Keywords',
     description: 'Description',
@@ -122,6 +123,7 @@ export default {
     route: 'Route',
     isPublished: 'Published',
     publishedAt: 'Publish Time',
+    postStatistics: 'Statistics',
     isPrivate: 'Private',
     password: 'Password',
     isCommentEnabled: 'Enable Comment',
@@ -130,6 +132,13 @@ export default {
     updatedAt: 'Update Time',
     write: 'Write',
     comment: 'Comment'
+  },
+  postStatistics: {
+    id: 'ID',
+    uniqueId: 'Unique ID',
+    pageView: 'Page View',
+    thumbUp: 'Thumb Up',
+    thumbDown: 'Thumb Down'
   },
   comment: {
     id: 'ID',

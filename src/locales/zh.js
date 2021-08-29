@@ -111,6 +111,7 @@ export default {
   },
   post: {
     id: 'ID',
+    uniqueId: '唯一ID',
     title: '标题',
     keywords: '关键词',
     description: '描述',
@@ -122,6 +123,7 @@ export default {
     route: '路由',
     isPublished: '发布',
     publishedAt: '发布时间',
+    postStatistics: '统计',
     isPrivate: '私有',
     password: '密码',
     isCommentEnabled: '允许评论',
@@ -130,6 +132,13 @@ export default {
     updatedAt: '修改时间',
     write: '写作',
     comment: '评论'
+  },
+  postStatistics: {
+    id: 'ID',
+    uniqueId: '唯一ID',
+    pageView: '阅读量',
+    thumbUp: '点赞量',
+    thumbDown: '点踩量'
   },
   comment: {
     id: 'ID',

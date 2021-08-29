@@ -309,6 +309,13 @@ export default {
           formatter: (v) => v ? dayjs(v).format('YYYY-MM-DD HH:mm:ss') : ''
         },
         {
+          key: 'postStatistics',
+          label: this.$t('post.postStatistics'),
+          formatter: (v) => {
+            return `${this.$t('postStatistics.pageView')}: ${v.pageView}`
+          }
+        },
+        {
           key: 'isPrivate',
           label: this.$t('post.isPrivate'),
           formatter: (v) => v ? this.$t('common.yes') : this.$t('common.no')
