@@ -5,5 +5,11 @@
   "display": "standalone",
   "background_color": "#fff",
   "description": "ELF Blogging System",
-  "icons": []
+  "icons": [
+    {
+      "src": "elf-web.png",
+      "size": "192x192",
+      "type": "image/png"
+    }
+  ]
 }
