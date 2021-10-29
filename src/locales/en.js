@@ -11,6 +11,7 @@ export default {
     post: 'Posts',
     navigation: 'Navigations',
     setting: 'Settings',
+    reader: 'Reader',
     log: 'Log'
   },
   menu: {

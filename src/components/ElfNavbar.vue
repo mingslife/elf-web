@@ -34,6 +34,10 @@
           <font-awesome-icon icon="cog" />
           <span v-text="$t('nav.setting')"></span>
         </b-nav-item>
+        <b-nav-item to="/reader" :active="$route.path === '/reader'" v-if="admin">
+          <font-awesome-icon icon="book-reader" />
+          <span v-text="$t('nav.reader')"></span>
+        </b-nav-item>
         <b-nav-item to="/log" :active="$route.path === '/log'" v-if="admin">
           <font-awesome-icon icon="file-alt" />
           <span v-text="$t('nav.log')"></span>

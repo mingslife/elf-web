@@ -11,6 +11,7 @@ export default {
     post: '文章',
     navigation: '导航',
     setting: '设置',
+    reader: '读者',
     log: '日志'
   },
   menu: {
@@ -144,7 +145,7 @@ export default {
   comment: {
     id: 'ID',
     level: '层级',
-    parentId: '父级 ID',
+    parentId: '父级ID',
     nickname: '昵称',
     email: '邮箱',
     ip: 'IP',
@@ -158,6 +159,25 @@ export default {
     reply: '回复',
     block: '屏蔽',
     unblock: '取消屏蔽'
+  },
+  reader: {
+    id: 'ID',
+    uniqueId: '唯一ID',
+    nickname: '昵称',
+    password: '密码',
+    gender: '性别',
+    birthday: '生日',
+    email: '邮箱',
+    phone: '电话',
+    userId: '用户ID',
+    openId: '第三方账号ID',
+    isActive: '是否激活',
+    createdAt: '创建时间',
+    updatedAt: '修改时间',
+    genders: {
+      male: '男',
+      female: '女'
+    }
   },
   writing: {
     save: '保存',
